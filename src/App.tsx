@@ -1,15 +1,10 @@
 import { useState, useEffect } from "react";
 import "./input.css";
-// import CardCom from "./components/CardCom";
-// import { LuSunset } from "react-icons/lu";
-// import { FiSunrise } from "react-icons/fi";
-// import { IoRainyOutline } from "react-icons/io5";
-// import ForecastCom from "./components/ForecastCom";
 import CurrentWeather from "./components/sections/CurrentWeather";
 import ForecastList from "./components/sections/ForecastList";
 import { useWeather } from "./hooks/useWeather";
 import { useTranslation } from "react-i18next";
-// import type { DayWeather } from "./types";
+import bgImage from "./assets/catherine-merlin-EYeRCpIIcqI-unsplash.jpg";
 
 function App() {
   const [lang, setLang] = useState<"ar" | "en">("en");
@@ -40,8 +35,9 @@ function App() {
   return (
     <>
       <main
+        style={{ backgroundImage: `url(${bgImage})` }}
         className="
-        min-h-screen bg-[url('src/assets/catherine-merlin-EYeRCpIIcqI-unsplash.jpg')] flex items-center justify-center bg-cover bg-center bg-no-repeat py-10"
+        min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat py-10"
       >
         <article className="w-11/12 max-w-[400px] min-h-[650px] p-6 rounded-3xl bg-white/10 backdrop-blur-lg border border-white/20 shadow-2xl text-white flex flex-col justify-between">
           <CurrentWeather weatherData={weatherData} lang={lang} />
