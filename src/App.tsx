@@ -13,7 +13,7 @@ function App() {
   useEffect(() => {
     i18n.changeLanguage(lang);
     document.dir = lang === "ar" ? "rtl" : "ltr";
-  }, [lang]);
+  }, [lang, i18n]);
   const { data: weatherData, loading, error } = useWeather(lang);
 
   if (loading) {
@@ -35,8 +35,10 @@ function App() {
   return (
     <>
       <main
-        style={{           backgroundColor: "#000",
-          backgroundImage: `url(${bgImage})`,}}
+        style={{
+          backgroundColor: "#000",
+          backgroundImage: `url(${bgImage})`,
+        }}
         className="
         min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat py-10"
       >

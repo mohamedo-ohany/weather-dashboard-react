@@ -1,0 +1,10 @@
+{
+  "عربي": "Arabic",
+  "loading": "Loading...",
+  "error": "Error fetching weather data.",
+  "no_data_available": "No data available",
+  "humidity": "Humidity",
+  "wind_speed": "Wind speed",
+  "Cairo, Egypt": "Cairo, Egypt",
+  "km/h": "km/h"
+}
