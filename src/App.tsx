@@ -35,7 +35,8 @@ function App() {
   return (
     <>
       <main
-        style={{ backgroundImage: `url(${bgImage})` }}
+        style={{           backgroundColor: "#000",
+          backgroundImage: `url(${bgImage})`,}}
         className="
         min-h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat py-10"
       >
